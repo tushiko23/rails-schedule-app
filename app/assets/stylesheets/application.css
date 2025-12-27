@@ -15,7 +15,7 @@
  *= require_tree .
  */
 
-@import url('fonts.googleapis.com');
+@import url('https://fonts.googleapis.com');
 
 body {
   font-family:  'Noto Sans JP', sans-serif;
