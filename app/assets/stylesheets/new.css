@@ -86,7 +86,6 @@
   cursor: pointer;
 }
 
-/* チェックマーク（擬似要素で描画） */
 .form-allday-checkbox::before {
   content: "";
   width: 10px;
@@ -97,7 +96,6 @@
   opacity: 0;
 }
 
-/* checked時 */
 .form-allday-checkbox:checked {
   background: #2F6B4F;
 }
@@ -106,13 +104,11 @@
   opacity: 1;
 }
 
-/* フォーカス時（キーボード操作対応） */
 .form-allday-checkbox:focus-visible {
   outline: 3px solid rgba(47, 107, 79, 0.35);
   outline-offset: 2px;
 }
 
-/* disabled時 */
 .form-allday-checkbox:disabled {
   opacity: 0.5;
   cursor: not-allowed;
@@ -142,6 +138,9 @@
   border-radius: 10px;
 }
 
+.form-add-button:hover {
+  background-color: #335A43;
+}
 
 .form-return-button {
   font-size: 18px;

@@ -10,6 +10,10 @@
   font-size: 14px;
 }
 
+.add-schedule-button:hover {
+  background-color: #D4E68A;
+}
+
 h2 {
   display: inline-block;
   align-self: center;
