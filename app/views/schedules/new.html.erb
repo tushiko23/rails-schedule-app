@@ -1,0 +1,51 @@
+<div class="new-wrapper">
+  <%= render "shared/error", object: @schedule %>
+
+  <% if flash[:danger] %> <p class="danger"><%= flash[:danger]%></p>
+  <% end %>
+
+  <h2 class="add-schedule">スケジュールの追加</h2>
+  <%= form_with model: @schedule, class: "schedule-form" do |f| %>
+
+  <div class="schedule-title-form">
+    <div class="label-with-required">
+      <%= f.label :title, 'タイトル:', class: "form-label" %><span class="required">*必須</span><br />
+    </div>
+    <%= f.text_field :title, placeholder: 'タイトルは20字以内で入力してください', class: "form-textfield" %>
+  </div>
+
+  <div class="schedule-date-form">
+    <div class="schedule-date-column">
+      <div class="label-with-required">
+        <%= f.label :start_date, '開始日:', class: "form-label" %>
+        <span class="required">*必須</span>
+      </div>
+      <%= f.date_field :start_date, class: "form-date-field", min: Date.current %>
+    </div>
+
+    <div class="schedule-date-column">
+      <div class="label-with-required">
+        <%= f.label :end_date, '終了日:', class: "form-label" %>
+        <span class="required">*必須</span>
+      </div>
+      <%= f.date_field :end_date, class: "form-date-field", min: Date.current %>
+    </div>
+  </div>
+
+  <div class="schedule-checkbox">
+    <%= f.label :is_allday, '終日', class: "form-label" %>
+    <%= f.check_box :is_allday, class: "form-allday-checkbox" %>
+  </div>
+
+  <div class="schedule-memo">
+    <%= f.label :memo, 'メモ:', class: "form-label" %><br>
+    <%= f.text_area :memo, placeholder: 'メモは500字以内で入力してください', class: "form-memo-field" %>
+  </div>
+
+  <div class="form-submit-button">
+    <%= f.submit 'スケジュールを追加', class: "form-add-button"%>
+    <%= link_to "トップに戻る", schedules_path(), class: "form-return-button" %>
+  </div>
+  <% end %>
+
+</div>

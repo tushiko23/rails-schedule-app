@@ -1,0 +1,52 @@
+<% if flash[:success] %>
+<p class="success"><%= flash[:success]%></p>
+<% end %>
+
+<div class="contents">
+  <div class="index-wrapper">
+    <h2>スケジュール一覧</h2>
+    <%= link_to "＋ スケジュールを追加する", new_schedule_path(), class: "add-schedule-button" %>
+  </div>
+  <div class="table-scroll">
+    <table class="index-tb">
+      <thead class="index-tb-hd">
+        <tr>
+          <th>id</th>
+          <th class="index-title">タイトル</th>
+          <th>開始日</th>
+          <th>終了日</th>
+          <th>終日</th>
+          <th>更新日時</th>
+          <th>詳細</th>
+          <th>編集</th>
+          <th>削除</th>
+        </tr>
+      </thead>
+
+      <tbody class="index-tb-hd">
+        <% @schedules.each do |schedule| %>
+        <tr>
+          <td><%= schedule.id %></td>
+          <td class="index-title"><%= schedule.title %></td>
+          <td><%= l schedule.start_date %></td>
+          <td><%= l schedule.end_date %></td>
+          <td><%= schedule.is_allday? ? '◯' : '' %></td>
+          <td><%= l schedule.updated_at %></td>
+          <td>
+            <span class="index-td-button"><%= link_to "詳細", schedule_path(schedule) %></span>
+          </td>
+          <td>
+            <span class="index-td-button"><%= link_to "編集する", edit_schedule_path(schedule) %></span>
+          </td>
+          <td>
+            <span class="index-td-button"><%= link_to "削除する", schedule_path(schedule), data: { turbo_method: :delete, turbo_confirm: "予定を削除しますか？" } %></span>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="schedule-num">
+    <p class="schedule-element-num">予定の合計: <%= @schedules_count %>件</p>
+  </div>
+</div>

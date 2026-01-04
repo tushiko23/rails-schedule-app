@@ -1,0 +1,17 @@
+ja:
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M"
+  date:
+    formats:
+      default: "%Y/%m/%d"
+  activerecord:
+    attributes:
+      schedule:
+        title: "タイトル"
+        start_date: "開始日"
+        end_date: "終了日"
+        memo: "メモ"
+  errors:
+    messages:
+        blank: "を入力してください" 

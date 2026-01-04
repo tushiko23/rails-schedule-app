@@ -1,0 +1,82 @@
+.form {
+  color: black;
+  font-weight: normal;
+}
+
+.label-id  {
+  margin: 15px 0;
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2F6B4F;
+}
+
+.label-title {
+  margin: 15px 0;
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2F6B4F;
+}
+
+.show-wrapper {
+  width: 650px;
+  margin: 50px auto;
+  background-color: #FFFFFF;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.25);
+}
+
+.schedule-dates {
+  display: inline-flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.schedule-date-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.schedule-date-label {
+  color: #2F6B4F;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.schedule-date-value {
+  font-size: 16px;
+  padding: 10px 12px;
+  border: 1px solid #d9e7df;
+  border-radius: 8px;
+}
+
+.is-allday-label {
+  color: #2F6B4F;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.is-allday-circle {
+  margin: 0px 10px;
+}
+
+.schedule-memo-label {
+  display: inline-flex;
+  font-size: 20px;
+  color: #2F6B4F;
+  font-weight: bold;
+}
+
+.schedule-memo-value {
+  color: black;
+  font-size: 20px;
+  font-weight: normal;
+  padding: 0px 12px;
+  border-radius: 8px;
+  margin: 0 20px;
+}

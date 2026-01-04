@@ -1,0 +1,35 @@
+<div class="show-wrapper">
+  <h2 class="add-schedule">スケジュール詳細</h2>
+
+  <div>
+    <p class="label-id">管理ID: <span class="form"><%= @schedule.id %></span></p>
+    <h3 class="label-title">タイトル: <span class="form"><%= @schedule.title %></span></h3>
+  </div>
+
+  <div class="schedule-dates">
+    <div class="schedule-date-item">
+      <div class="schedule-date-label">
+        開始日:
+      </div>
+      <span class="schedule-date-value"><%= l @schedule.start_date %></span>
+    </div>
+
+    <div class="schedule-date-item">
+      <div class="schedule-date-label">
+        終了日:
+      </div>
+      <span class="schedule-date-value"><%= l @schedule.end_date  %></span>
+    </div>
+  </div>
+
+  <p class="is-allday-label">終日:<span class="is-allday-circle"><%= @schedule.is_allday? ? '◯' : '' %></span></p>
+  <div class="schedule-memo-label">
+    <div class="schedule-memo-label">メモ:</div>
+    <span class="schedule-memo-value"><%= @schedule.memo %></span>
+  </div>
+
+  <div class=" form-submit-button">
+    <%= link_to "スケジュールを編集", edit_schedule_path(), class:  "form-add-button" %>
+    <%= link_to "トップに戻る", schedules_path(), class: "form-return-button" %>
+  </div>
+</div>
